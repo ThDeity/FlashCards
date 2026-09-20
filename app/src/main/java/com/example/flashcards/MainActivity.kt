@@ -1,0 +1,21 @@
+package com.example.flashcards
+
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.activity.enableEdgeToEdge
+import com.example.flashcards.navigation.NavGraph
+import com.example.flashcards.ui.theme.FlashCardsTheme
+
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+
+        setContent {
+            FlashCardsTheme {
+                NavGraph()
+            }
+        }
+    }
+}
